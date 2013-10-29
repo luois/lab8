@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) . './config.php');
+require_once(dirname(__FILE__) . '/config.php');
 
 $token  = $_POST['stripeToken'];
 
@@ -9,6 +9,7 @@ $customer = Stripe_Customer::create(array(
 ));
 
 $charge = Stripe_Charge::create(array(
+    
     'customer' => $customer->id,
     'amount'   => 5000,
     'currency' => 'cad'
