@@ -42,7 +42,7 @@ $customer = Stripe_Customer::create(array(
 $charge = Stripe_Charge::create(array(
     'customer' => $customer->id,
     'amount'   => 5000,
-    'currency' => 'usd'
+    'currency' => 'cad'
 ));
 
 echo '<h1>Successfully charged $50.00!</h1>';
